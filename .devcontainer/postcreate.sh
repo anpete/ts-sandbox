@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "hello world!"
+pnpm add -D vitest
+npm run test

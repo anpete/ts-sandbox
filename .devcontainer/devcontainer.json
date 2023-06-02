@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
+	"name": "TypeScript Sandbox",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-20",
 
@@ -12,7 +12,15 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "./.devcontainer/post-create.sh"
+	"postCreateCommand": "chmod +x ./.devcontainer/postcreate.sh ; ./.devcontainer/postcreate.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ZixuanChen.vitest-explorer",
+				"esbenp.prettier-vscode"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
